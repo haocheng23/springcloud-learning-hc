@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/macrozheng/springcloud-config.git
+          uri: https://gitee.com/haocheng236/springcloud-config.git
           username: macro
           password: 123456
           clone-on-start: true #开启启动时直接从git获取配置

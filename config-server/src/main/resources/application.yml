@@ -7,11 +7,11 @@ spring:
     config:
       server:
         git: #配置存储配置信息的Git仓库
-          uri: https://gitee.com/macrozheng/springcloud-config.git
+          uri: https://gitee.com/haocheng236/springcloud-config.git
           username: macro
           password: 123456
           clone-on-start: true #开启启动时直接从git获取配置
-          search-paths: '{application}' #application占位符，表示对于不同的应用
+#          search-paths: '{application}' #application占位符，表示对于不同的应用
 eureka:
   client:
     service-url:
