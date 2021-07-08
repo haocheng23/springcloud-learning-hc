@@ -1,0 +1,29 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: #Config客户端配置
+      profile: dev #环境名称
+      label: dev #分支名称
+      uri: http://localhost:8901 #配置中心地址
+      name: config #应用名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
+
+# 获取配置信息
+# /{label}/{application}-{profile}
+# 获取配置文件信息
+# /{label}/{application}-{profile}.yml
+
+#  application：代表应用名称，默认为配置文件中的spring.application.name，如果配置了spring.cloud.config.name，则为该名称；
+#  label：代表分支名称，对应配置文件中的spring.cloud.config.label；
+#  profile：代表环境名称，对应配置文件中的spring.cloud.config.profile。
